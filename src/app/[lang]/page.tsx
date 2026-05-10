@@ -128,57 +128,47 @@ export default function HomePage() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="relative flex flex-col justify-center items-center lg:items-end"
+              className="relative flex flex-col justify-center items-center lg:items-end w-full mt-8 lg:mt-0"
             >
-              <div className="relative w-full max-w-2xl lg:translate-x-12">
+              <div className="relative w-full max-w-2xl lg:translate-x-6">
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1 }}
-                  className="absolute -top-10 right-0 z-0 pointer-events-none"
+                  className="absolute -top-16 lg:-top-24 right-0 z-0 pointer-events-none text-right"
                 >
-                  <p className="text-7xl lg:text-9xl font-black text-white/5 tracking-tighter italic uppercase leading-none">
+                  <p className="text-6xl sm:text-7xl lg:text-9xl font-black text-white/5 tracking-tighter italic uppercase leading-none">
                     {category === "motorcycles" ? "Splendor+" : "Destini"}
                   </p>
-                  <p className={cn("font-black text-[#e11d2a]/20 italic uppercase -mt-4 text-right", lang === "ta" ? "text-xl lg:text-2xl tracking-normal" : "text-2xl lg:text-4xl tracking-tighter")}>
+                  <p className={cn("font-black text-[#e11d2a]/30 italic uppercase -mt-2 lg:-mt-4", lang === "ta" ? "text-lg sm:text-xl lg:text-2xl tracking-normal" : "text-xl sm:text-2xl lg:text-4xl tracking-tighter")}>
                     {dict.home.hero.performance}
                   </p>
                 </motion.div>
 
-                <div className="relative z-10">
+                <div className="relative z-10 w-full aspect-[4/3] sm:aspect-video lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(225,29,42,0.15)] border border-white/10 group mt-12 lg:mt-0">
+                  <div className="absolute inset-0 bg-gradient-to-tr from-[#e11d2a]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 z-20 pointer-events-none" />
                   <Image
                     src={category === "motorcycles" ? "/images/hero-bike.png" : "/images/hero-scooter.png"}
                     alt="Hero Showcase"
-                    width={1000}
-                    height={800}
-                    className="w-full h-auto object-contain drop-shadow-[0_20px_80px_rgba(225,29,42,0.25)]"
+                    fill
+                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
                     priority
                   />
-                  
-                  <div className="relative -mt-16 lg:-mt-24 overflow-hidden h-24 lg:h-40 bike-reflection pointer-events-none select-none">
-                    <Image
-                      src={category === "motorcycles" ? "/images/hero-bike.png" : "/images/hero-scooter.png"}
-                      alt="Reflection"
-                      width={1000}
-                      height={800}
-                      className="w-full h-auto object-contain"
-                    />
-                  </div>
                 </div>
 
-                <div className="absolute bottom-4 left-1/2 lg:left-auto lg:right-0 -translate-x-1/2 lg:translate-x-0 flex items-center gap-8 z-20">
+                <div className="flex items-center justify-center lg:justify-end gap-8 mt-8 z-20 w-full">
                   <button className="group flex items-center gap-2 text-white/30 hover:text-white transition-colors">
-                    <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center group-hover:border-[#e11d2a] transition-all">
+                    <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center group-hover:border-[#e11d2a] transition-all bg-[#111]">
                       <ArrowRight className="w-5 h-5 rotate-180" />
                     </div>
                   </button>
                   <div className="flex gap-3">
                     {[1, 2, 3, 4].map(i => (
-                      <div key={i} className={cn("w-10 h-1 transition-all rounded-full", i === 1 ? "bg-[#e11d2a] w-16" : "bg-white/10 hover:bg-white/30 cursor-pointer")} />
+                      <div key={i} className={cn("w-8 sm:w-10 h-1.5 transition-all rounded-full", i === 1 ? "bg-[#e11d2a] w-12 sm:w-16 shadow-[0_0_10px_rgba(225,29,42,0.5)]" : "bg-white/10 hover:bg-white/30 cursor-pointer")} />
                     ))}
                   </div>
                   <button className="group flex items-center gap-2 text-white/30 hover:text-white transition-colors">
-                    <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center group-hover:border-[#e11d2a] transition-all">
+                    <div className="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center group-hover:border-[#e11d2a] transition-all bg-[#111]">
                       <ArrowRight className="w-5 h-5" />
                     </div>
                   </button>
