@@ -1,0 +1,328 @@
+{
+  "common": {
+    "home": "Home",
+    "bikes": "Bikes",
+    "services": "Services",
+    "gallery": "Gallery",
+    "about": "About",
+    "contact": "Contact",
+    "enquire": "Enquire",
+    "enquire_now": "Enquire Now",
+    "book_test_ride": "Book a Test Ride",
+    "call_now": "Call Now",
+    "chat_with_us": "Chat with us!",
+    "motorcycles": "Motorcycles",
+    "scooters": "Scooters"
+  },
+  "navbar": {
+    "logo_subtitle": "Hero Motors"
+  },
+  "footer": {
+    "about_text": "Your trusted Hero MotoCorp authorised dealer in Madurai. Providing excellence in sales and service for over 15 years.",
+    "quick_links": "Quick Links",
+    "business_hours": "Business Hours",
+    "contact_us": "Contact Us",
+    "monday_saturday": "Monday – Saturday",
+    "sunday": "Sunday",
+    "public_holidays": "Public Holidays",
+    "closed": "Closed",
+    "address": "Plot No 3, Alagar Nagar,\nAlaganalur Main Road, Sikkandar Savadi,\nMadurai, Tamil Nadu - 625018",
+    "copyright": "© {year} Velmurugan Motors. Authorised Hero MotoCorp Dealer.",
+    "privacy_policy": "Privacy Policy",
+    "terms_of_service": "Terms of Service"
+  },
+  "bike_card": {
+    "top_choice": "Top Choice",
+    "mileage": "Mileage",
+    "engine": "Engine",
+    "price_starts_at": "Price Starts At",
+    "easy_emi": "Easy EMI",
+    "enquire_now": "Enquire Now",
+    "technical_specs": "Technical Specs",
+    "technical_specs": "Technical Specs",
+    "categories": {
+      "commuter": "Commuter",
+      "premium": "Premium",
+      "sport": "Sport",
+      "adventure": "Adventure",
+      "scooter": "Scooter"
+    }
+  },
+  "contact_form": {
+    "success_title": "Thank You!",
+    "success_desc": "Your enquiry has been received. Our team will contact you within 24 hours.",
+    "send_another": "Send Another Message",
+    "name_label": "Full Name",
+    "name_placeholder": "Your full name",
+    "phone_label": "Phone Number",
+    "phone_placeholder": "+91 XXXXX XXXXX",
+    "email_label": "Email Address",
+    "email_placeholder": "your@email.com",
+    "interest_label": "Interested In",
+    "select_bike": "Select a bike (optional)",
+    "service_parts": "Service / Spare Parts",
+    "other_enquiry": "Other / General Enquiry",
+    "message_label": "Message",
+    "message_placeholder": "Tell us how we can help you...",
+    "error_message": "Something went wrong. Please try again or call us directly.",
+    "sending": "Sending...",
+    "send_button": "Send Enquiry",
+    "footer_note": "We typically respond within 24 hours · Your info is safe with us."
+  },
+  "home": {
+    "hero": {
+      "title_1": "ELEVATE YOUR",
+      "title_2": "RIDE",
+      "features": [
+        "Madurai's largest fleet of Hero legends",
+        "Seamless Finance: Zero Hassle, Instant Approvals",
+        "Express Delivery: From Showroom to Road Today",
+        "Premium Care with 100% Genuine Hero Spares"
+      ],
+      "request_callback": "Request A Callback",
+
+      "performance": "Performance"
+    },
+    "stats": {
+      "legends_on_road": "Legends on Road",
+      "years_of_excellence": "Years of Excellence",
+      "hero_innovation": "Hero Innovation",
+      "customer_trust": "Customer Trust"
+    },
+    "collection": {
+      "subtitle": "Our Collection",
+      "title": "UNLEASH THE POWER",
+      "desc": "Experience the perfect blend of legendary mileage and cutting-edge performance. Explore Madurai's most trusted motorcycle collection.",
+      "view_all": "View All Models"
+    },
+    "why_us": {
+      "subtitle": "Why Us",
+      "title": "Why Choose Velmurugan Motors?",
+      "desc": "At Velmurugan Motors, we don't just sell bikes; we build lifelong relationships through trust, transparency, and technical excellence.",
+      "features": [
+        { "title": "Authorised Dealer", "desc": "Official Hero MotoCorp dealership with genuine spare parts and warranty." },
+        { "title": "Expert Technicians", "desc": "Trained Hero-certified mechanics for reliable service every time." },
+        { "title": "24/7 Support", "desc": "Customer support available whenever you need us." },
+        { "title": "Quick Service", "desc": "Fast turnaround times so your bike is back on road in no time." }
+      ]
+    },
+    "testimonials": {
+      "subtitle": "Customer Stories",
+      "title": "WHAT OUR RIDERS SAY",
+      "list": [
+        { "name": "Rajesh Kumar", "location": "Madurai", "text": "Excellent service and great prices! Bought my Splendor Plus here and couldn't be happier. The staff was very helpful." },
+        { "name": "Murugan S.", "location": "Virudhunagar", "text": "Got my HF Deluxe serviced here. Very professional team and quick work. Highly recommend Velmurugan Motors!" },
+        { "name": "Priya Devi", "location": "Dindigul", "text": "Best bike dealer in Madurai. Easy EMI options and transparent pricing. Bought my Glamour with zero hassle." }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Lead The Way?",
+      "desc": "Join the family of 10,000+ satisfied riders. Visit our Madurai showroom today for exclusive exchange offers and instant on-spot approvals.",
+      "get_advice": "Get Expert Advice",
+      "browse_catalog": "Browse Catalog"
+    },
+    "founder_message": {
+      "title": "A Message From Our Founder",
+      "quote": "Our mission is simple: to provide every rider in Madurai with a Hero that they can rely on for a lifetime.",
+      "founder": "Mr. Krishnamoorthi",
+      "founder_title": "Founder & Managing Director"
+    }
+  },
+  "services": {
+    "hero": {
+      "subtitle": "Service Excellence",
+      "title_1": "PRECISION CARE FOR",
+      "title_2": "YOUR LEGEND",
+      "desc": "Preserve the performance and longevity of your Hero with our factory-trained certified team and 100% genuine engineering.",
+      "book_phone": "Book by Phone",
+      "online_enquiry": "Online Enquiry"
+    },
+    "service_cards": [
+      {
+        "title": "Free Service",
+        "desc": "Complimentary scheduled services as per Hero MotoCorp guidelines for new bikes.",
+        "points": ["1st, 2nd & 3rd Free Service", "Genuine Hero lubricants", "Multi-point inspection"]
+      },
+      {
+        "title": "Paid Service",
+        "desc": "Comprehensive periodic maintenance to keep your bike running at peak performance.",
+        "points": ["Engine tune-up", "Brake adjustment & check", "Chain lubrication & tension"]
+      },
+      {
+        "title": "Genuine Spare Parts",
+        "desc": "100% authentic Hero MotoCorp spare parts to ensure safety and longevity.",
+        "points": ["OEM-certified parts", "All Hero models covered", "Competitive pricing"]
+      },
+      {
+        "title": "Annual Maintenance",
+        "desc": "Yearly comprehensive packages to keep your bike in showroom condition.",
+        "points": ["Complete bike overhaul", "Battery & electrical check", "Tyre & suspension check"]
+      }
+    ],
+    "includes": {
+      "subtitle": "Precision First",
+      "title": "WHAT'S INCLUDED IN EVERY SERVICE",
+      "items": [
+        "Engine oil & filter change",
+        "Air filter cleaning / replacement",
+        "Spark plug inspection",
+        "Brake pad inspection & adjustment",
+        "Chain cleaning, lubrication & tension",
+        "Tyre pressure & tread check",
+        "Battery check & terminals cleaning",
+        "Lights & electrical inspection",
+        "Throttle & clutch cable adjustment",
+        "Coolant level check (if applicable)"
+      ]
+    },
+    "cta": {
+      "title_1": "KEEP YOUR HERO",
+      "title_2": "IN PEAK FORM",
+      "desc": "Authorized service is the key to reliability and peak resale value. Secure your slot at Madurai's premier Hero service hub.",
+      "business_hours": "Business Hours",
+      "hours_time": "Mon - Sat: 9 AM - 7 PM"
+    }
+  },
+  "about": {
+    "header": {
+      "subtitle": "Our Story",
+      "title": "The Velmurugan Motors Legacy",
+      "desc": "Pioneering urban mobility in Madurai: A 15-year journey of trust, speed, and reliability."
+    },
+    "story": {
+      "founder": "Mr. Krishnamoorthi – Founder",
+      "title": "Driven by Madurai, Built on Unshakeable Trust",
+      "p1": "Hero Velmurugan Motors was founded with a simple belief — every person in Madurai deserves access to a reliable, high-quality two-wheeler at a fair price. What started as a small showroom has grown into one of Madurai's most trusted Hero MotoCorp dealerships.",
+      "p2": "Our founder, Mr. Krishnamoorthi, has spent over 15 years building relationships with customers across the city and surrounding villages. He understands the needs of farmers, students, working professionals, and families — because they are our neighbours, our community.",
+      "p3": "Today, our team of Hero-certified technicians and friendly sales staff carry that same spirit forward — ensuring every customer who walks through our door leaves with confidence, clarity, and the right bike for their needs."
+    },
+    "stats": [
+      ["10,000+", "Happy Riders"],
+      ["15+", "Years of Excellence"],
+      ["Full Range", "Hero Innovation"],
+      ["4.8/5", "Trust Score"]
+    ],
+    "values": {
+      "subtitle": "What We Stand For",
+      "title": "Our Core Values",
+      "items": [
+        { "title": "Customer First", "desc": "Every decision we make puts the customer's needs and trust at the centre." },
+        { "title": "Genuine Quality", "desc": "We only sell and service with 100% original Hero MotoCorp parts and standards." },
+        { "title": "Community Focus", "desc": "Deeply rooted in Madurai, we give back to the community that has supported us." },
+        { "title": "Continuous Growth", "desc": "We constantly improve our service to match evolving customer needs." }
+      ]
+    },
+    "milestones": {
+      "subtitle": "Our Journey",
+      "title": "Key Milestones",
+      "items": [
+        { "year": "2008", "title": "Founded", "desc": "Hero Velmurugan Motors opened its doors in Madurai, starting with a small showroom." },
+        { "year": "2012", "title": "Service Centre", "desc": "Expanded with a dedicated Hero-certified service and spare parts centre." },
+        { "year": "2016", "title": "5,000+ Legends", "desc": "Crossed the milestone of 5,000 satisfied riders across Madurai district." },
+        { "year": "2020", "title": "Digital Transformation", "desc": "Launched contactless enquiries and virtual showroom experiences." },
+        { "year": "2024", "title": "10,000+ Families", "desc": "Proudly serving over 10,000 families with a fleet of Hero motorcycles." }
+      ]
+    },
+    "partnership": {
+      "subtitle": "Our Association",
+      "title": "Proud Hero MotoCorp Partner",
+      "desc": "As an authorised Hero MotoCorp dealership, we uphold the highest standards of sales, service, and customer care. Every bike we sell comes with Hero's full manufacturer warranty and our personal commitment to your satisfaction."
+    }
+  },
+  "contact": {
+    "header": {
+      "subtitle": "Get In Touch",
+      "title": "Start Your Journey",
+      "desc": "Whether you're booking a test ride or seeking expert advice, our team is dedicated to your riding success."
+    },
+    "cards": {
+      "call_us": "Call Us",
+      "call_time": "Mon–Sat, 9 AM – 7 PM",
+      "whatsapp": "WhatsApp",
+      "chat_us": "Chat with Us",
+      "wa_desc": "Quick response guaranteed",
+      "email_us": "Email Us",
+      "visit_us": "Visit Us",
+      "address": "Plot No 3, Alagar Nagar,<br />Alaganalur Main Road, Sikkandar Savadi,<br />Madurai, Tamil Nadu - 625018",
+      "business_hours": "Business Hours"
+    },
+    "form": {
+      "title": "CONNECT WITH OUR EXPERTS",
+      "desc": "Tell us about your dream ride, and we'll handle the rest. Guaranteed response within 24 hours."
+    }
+  },
+  "gallery": {
+    "header": {
+      "subtitle": "Visual Tour",
+      "title": "Gallery",
+      "desc": "A glimpse into our showroom, events, and the smiles we create for our customers."
+    },
+    "categories": {
+      "All": "All",
+      "Showroom": "Showroom",
+      "Bikes": "Bikes",
+      "Events": "Events",
+      "Customers": "Customers"
+    },
+    "items": {
+      "Our Showroom": "Our Showroom",
+      "Splendor Plus": "Splendor Plus",
+      "Bike Launch Event": "Bike Launch Event",
+      "Xtreme 160R": "Xtreme 160R",
+      "Happy Customer": "Happy Customer",
+      "Service Bay": "Service Bay",
+      "Glamour": "Glamour",
+      "Diwali Offers": "Diwali Offers",
+      "Delivery Day": "Delivery Day",
+      "XPulse 200": "XPulse 200",
+      "Spare Parts Section": "Spare Parts Section",
+      "First Ride!": "First Ride!"
+    },
+    "footer": {
+      "text_1": "Follow us on ",
+      "facebook": "Facebook",
+      "and": " and ",
+      "instagram": "Instagram",
+      "text_2": " for the latest photos and updates from Velmurugan Motors."
+    }
+  },
+  "bikes": {
+    "header": {
+      "subtitle": "Our Collection",
+      "title": "Hero Innovation Fleet",
+      "desc": "From the legendary fuel-efficiency of the Splendor to the raw power of the Xtreme. Discover your next journey here."
+    },
+    "categories": {
+      "all": "All",
+      "commuter": "Commuter",
+      "premium": "Premium",
+      "sport": "Sport",
+      "adventure": "Adventure",
+      "scooter": "Scooter"
+    },
+    "disclaimer": "* Ex-showroom prices. Prices are indicative and subject to change. Contact us for the latest on-road price in Madurai.",
+    "cta": {
+      "title": "STILL LOOKING FOR YOUR PERFECT MATCH?",
+      "desc": "Our expert consultants are ready to guide you to the Hero that fits your lifestyle and aspirations.",
+      "button": "Talk to Our Experts"
+    },
+    "details": {
+      "price": "Starting Price (Ex-showroom)",
+      "specs": "Key Specifications",
+      "engine": "Engine",
+      "power": "Power",
+      "mileage": "Mileage",
+      "weight": "Weight",
+      "features": "Key Features",
+      "enquire": "Enquire Now",
+      "download_brochure": "Download Brochure",
+      "back_to_catalog": "Back to Catalog",
+      "available_colors": "Available Colors",
+      "best_seller": "Best Seller",
+      "new_launch": "New Launch",
+      "on_road_price": "On-road price:",
+      "emi_starts": "EMI from",
+      "whatsapp_message": "Hi! I am interested in {bike}. Please share details."
+    }
+  }
+}
