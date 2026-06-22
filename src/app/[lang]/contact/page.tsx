@@ -31,10 +31,10 @@ export default async function ContactPage({
   return (
     <>
       {/* Header */}
-      <section className="bg-[#0f172a] pt-32 pb-16">
+      <section className="bg-[#0f172a] pt-24 sm:pt-32 pb-10 sm:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-[#e2211c] text-sm font-semibold tracking-widest uppercase mb-2">{dict.contact.header.subtitle}</p>
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">{dict.contact.header.title}</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">{dict.contact.header.title}</h1>
           <p className="text-white/60 text-lg max-w-2xl leading-relaxed">
             {dict.contact.header.desc}
           </p>
@@ -114,7 +114,7 @@ export default async function ContactPage({
               <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
                 <h2 className="text-2xl font-bold text-slate-900 mb-2">{dict.contact.form.title}</h2>
                 <p className="text-slate-500 text-sm mb-6">{dict.contact.form.desc}</p>
-                <ContactForm />
+                <ContactForm lang={lang} dict={dict} />
               </div>
             </div>
           </div>

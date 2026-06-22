@@ -5,8 +5,12 @@ const locales = ['ta', 'en'];
 const defaultLocale = 'ta';
 
 export function proxy(request: NextRequest) {
-  // Check if there is any supported locale in the pathname
   const { pathname } = request.nextUrl;
+
+  // Skip locale redirect for admin routes – they have their own layout
+  if (pathname.startsWith('/admin')) return;
+
+  // Check if there is any supported locale in the pathname
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );

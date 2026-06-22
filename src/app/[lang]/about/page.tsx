@@ -27,10 +27,10 @@ export default async function AboutPage({
   return (
     <>
       {/* Header */}
-      <section className="bg-[#0f172a] pt-32 pb-16">
+      <section className="bg-[#0f172a] pt-24 sm:pt-32 pb-10 sm:pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className={cn("text-[#e2211c] text-sm font-semibold uppercase mb-2", lang === "ta" ? "tracking-normal" : "tracking-widest")}>{dict.about.header.subtitle}</p>
-          <h1 className="text-4xl lg:text-5xl font-bold text-white mb-4">{dict.about.header.title}</h1>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">{dict.about.header.title}</h1>
           <p className="text-white/60 text-lg max-w-2xl">
             {dict.about.header.desc}
           </p>
@@ -38,7 +38,7 @@ export default async function AboutPage({
       </section>
 
       {/* Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             {/* Founder Image */}
@@ -109,11 +109,11 @@ export default async function AboutPage({
             <h2 className="text-3xl font-bold text-slate-900">{dict.about.milestones.title}</h2>
           </div>
           <div className="relative">
-            <div className="absolute left-8 top-0 bottom-0 w-px bg-slate-200" />
+            <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-px bg-slate-200" />
             <div className="space-y-8">
               {dict.about.milestones.items.map((m) => (
-                <div key={m.year} className="relative flex gap-6">
-                  <div className="relative z-10 flex items-center justify-center w-16 h-16 rounded-full bg-[#e2211c] text-white font-bold text-sm shrink-0 shadow-lg shadow-red-200">
+                <div key={m.year} className="relative flex gap-4 sm:gap-6">
+                  <div className="relative z-10 flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#e2211c] text-white font-bold text-xs sm:text-sm shrink-0 shadow-lg shadow-red-200">
                     {m.year}
                   </div>
                   <div className="bg-slate-50 rounded-2xl p-5 flex-1 border border-slate-100 transition-all duration-500 hover:-translate-y-1 hover:shadow-md hover:bg-white">
@@ -135,6 +135,18 @@ export default async function AboutPage({
           <p className="text-white/60 leading-relaxed max-w-2xl mx-auto">
             {dict.about.partnership.desc}
           </p>
+        </div>
+      </section>
+      {/* Admin Login Link */}
+      <section className="bg-[#0f172a] pb-6 pt-4 border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+          <a
+            href="/admin/login"
+            className="text-white/30 hover:text-white/60 text-[10px] uppercase tracking-widest font-bold transition-colors flex items-center gap-2"
+          >
+            <Users className="w-3 h-3" />
+            Admin Login
+          </a>
         </div>
       </section>
     </>

@@ -4,6 +4,8 @@ import "../globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import { getDictionary } from "@/dictionaries/getDictionary";
+import { AnalyticsTracker } from "@/components/AnalyticsTracker";
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -21,7 +23,7 @@ const notoTamil = Noto_Sans_Tamil({
   subsets: ["tamil"],
   variable: "--font-noto-tamil",
   display: "swap",
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["400", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -40,7 +42,7 @@ export const metadata: Metadata = {
     title: "Hero Velmurugan Motors – Hero Bikes Dealer in Madurai",
     description:
       "Buy Hero bikes in Madurai at Hero Velmurugan Motors. Best price, EMI options, and expert service support.",
-    url: "https://herovemuruganmotors.in",
+    url: "https://velmuruganmotors.in",
     siteName: "Hero Velmurugan Motors",
     images: [
       {
@@ -60,7 +62,7 @@ export const metadata: Metadata = {
       "Buy Hero bikes in Madurai at Hero Velmurugan Motors. Best price, EMI options, and expert service support.",
     images: ["/og-cover.jpg"],
   },
-  metadataBase: new URL("https://herovelumuruganmotors.in"),
+  metadataBase: new URL("https://velmuruganmotors.in"),
   other: {
     google: "notranslate",
   },
@@ -75,13 +77,15 @@ export default async function RootLayout({
 }>) {
   const { lang: rawLang } = await params;
   const lang = (rawLang === "en" || rawLang === "ta" ? rawLang : "ta") as "en" | "ta";
+  const dict = await getDictionary(lang);
   return (
     <html lang={lang} className={`${outfit.variable} ${inter.variable} ${notoTamil.variable}`} data-scroll-behavior="smooth">
       <body className="min-h-screen flex flex-col bg-background text-foreground antialiased">
-        <Navbar lang={lang} />
+        <Navbar lang={lang} dict={dict} />
         <main className="flex-1">{children}</main>
         <Footer lang={lang} />
-        <WhatsAppFloat lang={lang} />
+        <WhatsAppFloat lang={lang} dict={dict} />
+        <AnalyticsTracker />
       </body>
     </html>
   );

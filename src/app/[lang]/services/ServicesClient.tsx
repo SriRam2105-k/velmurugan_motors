@@ -52,7 +52,7 @@ export default function ServicesClient() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-[#0a0a0a] overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 lg:pt-40 pb-16 lg:pb-20 bg-[#0a0a0a] overflow-hidden">
         <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-gradient-to-l from-[#e11d2a]/10 to-transparent pointer-events-none" />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -63,7 +63,7 @@ export default function ServicesClient() {
             className="max-w-3xl"
           >
             <p className={cn("text-[#e11d2a] text-sm font-black uppercase mb-4", lang === "ta" ? "tracking-normal" : "tracking-[0.3em]")}>{dict.services.hero.subtitle}</p>
-            <h1 className="text-5xl lg:text-7xl font-black text-white mb-8 tracking-tighter leading-none uppercase">
+            <h1 className="text-3xl sm:text-5xl lg:text-7xl font-black text-white mb-8 tracking-tighter leading-none uppercase">
               {dict.services.hero.title_1} <br />
               <span className="text-[#e11d2a]">{dict.services.hero.title_2}</span>
             </h1>
@@ -83,7 +83,7 @@ export default function ServicesClient() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-24 bg-white relative z-10 -mt-8 rounded-t-[3rem]">
+      <section className="py-12 sm:py-16 lg:py-24 bg-white relative z-10 -mt-8 rounded-t-2xl sm:rounded-t-[3rem]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
             {services.map((service, index) => (
@@ -117,7 +117,7 @@ export default function ServicesClient() {
       </section>
 
       {/* What's Included */}
-      <section className="py-24 bg-slate-50">
+      <section className="py-12 sm:py-16 lg:py-24 bg-slate-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <p className={cn("text-[#e11d2a] text-sm font-black uppercase mb-4", lang === "ta" ? "tracking-normal" : "tracking-[0.3em]")}>{dict.services.includes.subtitle}</p>
@@ -146,10 +146,10 @@ export default function ServicesClient() {
       </section>
 
       {/* Book Service CTA */}
-      <section className="py-24 bg-[#0a0a0a] relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-24 bg-[#0a0a0a] relative overflow-hidden">
         <div className="absolute inset-0 bg-[#e11d2a]/5 pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-          <h2 className="text-4xl lg:text-6xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.9]">
+          <h2 className="text-2xl sm:text-4xl lg:text-6xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.9]">
             {dict.services.cta.title_1} <br /> {dict.services.cta.title_2}
           </h2>
           <p className="text-slate-400 text-lg lg:text-xl mb-12 font-medium max-w-2xl mx-auto">

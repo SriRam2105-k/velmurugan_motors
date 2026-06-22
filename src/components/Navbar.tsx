@@ -7,17 +7,13 @@ import { Menu, X, Phone } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-import en from "@/dictionaries/en.json";
-import ta from "@/dictionaries/ta.json";
 
-const dictionaries = { en, ta };
 
-export default function Navbar({ lang }: { lang: "en" | "ta" }) {
+export default function Navbar({ lang, dict }: { lang: "en" | "ta", dict: any }) {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
-  const dict = dictionaries[lang];
 
   // pathname will be something like /ta, /ta/bikes, /en/bikes
   const isHome = pathname === `/${lang}`;
@@ -64,15 +60,15 @@ export default function Navbar({ lang }: { lang: "en" | "ta" }) {
               alt="Hero Velmurugan Motors" 
               className="h-10 lg:h-12 w-auto object-contain transition-transform group-hover:scale-105"
             />
-            <div className="flex flex-col justify-center min-w-[120px] lg:min-w-[180px]">
-              <p className="text-slate-900 font-black text-sm lg:text-lg tracking-tight uppercase leading-none">
+            <div className="flex flex-col justify-center min-w-0 sm:min-w-[120px] lg:min-w-[180px]">
+              <p className="text-slate-900 font-black text-xs sm:text-sm lg:text-lg tracking-tight uppercase leading-none">
                 Velmurugan
               </p>
               <p className={cn(
                 "text-[#e11d2a] font-bold uppercase",
                 lang === "ta" 
-                  ? "text-[11px] lg:text-[13px] leading-tight font-noto-tamil tracking-normal mt-0.5" 
-                  : "text-[10px] lg:text-xs tracking-[0.2em] leading-tight"
+                  ? "text-[10px] sm:text-[11px] lg:text-[13px] leading-tight font-noto-tamil tracking-normal mt-0.5" 
+                  : "text-[8px] sm:text-[10px] lg:text-xs tracking-[0.2em] leading-tight"
               )}>
                 {dict.navbar.logo_subtitle}
               </p>
@@ -119,11 +115,11 @@ export default function Navbar({ lang }: { lang: "en" | "ta" }) {
             </div>
 
             <a
-              href="tel:+91XXXXXXXXXX"
+              href="tel:+917490835159"
               className="flex items-center gap-1 xl:gap-2 text-slate-600 hover:text-[#e11d2a] text-[10px] xl:text-sm font-medium transition-colors whitespace-nowrap"
             >
               <Phone className="w-3 h-3 xl:w-4 xl:h-4" />
-              <span>+91 XXXXX XXXXX</span>
+              <span>+91 74908 35159</span>
             </a>
             <Link
               href={`/${lang}/contact`}
@@ -173,8 +169,8 @@ export default function Navbar({ lang }: { lang: "en" | "ta" }) {
       <div
         id="mobile-menu"
         className={cn(
-          "lg:hidden bg-white border-t border-slate-100 transition-all duration-300 overflow-hidden shadow-2xl",
-          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          "lg:hidden bg-white border-t border-slate-100 transition-all duration-300 ease-in-out origin-top transform shadow-2xl overflow-hidden",
+          isOpen ? "max-h-screen opacity-100 scale-y-100" : "max-h-0 opacity-0 scale-y-95"
         )}
       >
         <nav className="px-4 py-6 space-y-2" aria-label="Mobile navigation">

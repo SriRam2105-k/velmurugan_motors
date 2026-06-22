@@ -6,22 +6,18 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { CheckCircle, Loader2, AlertCircle } from "lucide-react";
-import { useParams } from "next/navigation";
-import { bikes } from "@/data/bikes";
-import en from "@/dictionaries/en.json";
-import ta from "@/dictionaries/ta.json";
 
-const dictionaries = { en, ta };
+
+import { bikes } from "@/data/bikes";
 
 interface ContactFormProps {
   bikeSlug?: string;
+  lang: "en" | "ta";
+  dict: any;
 }
 
-export default function ContactForm({ bikeSlug }: ContactFormProps) {
+export default function ContactForm({ bikeSlug, lang, dict }: ContactFormProps) {
   const formId = process.env.NEXT_PUBLIC_FORMSPREE_ID || "xpwzgkjb";
-  const params = useParams();
-  const lang = (params?.lang as "en" | "ta") || "ta";
-  const dict = dictionaries[lang];
 
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [formData, setFormData] = useState({
@@ -40,12 +36,29 @@ export default function ContactForm({ bikeSlug }: ContactFormProps) {
     e.preventDefault();
     setStatus("loading");
     try {
-      const res = await fetch(`https://formspree.io/f/${formId}`, {
+      // Save to Supabase via our API route
+      const supabaseRes = await fetch("/api/enquiries", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
-        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.name,
+          phone: formData.phone,
+          email: formData.email,
+          message: formData.message,
+          bike_slug: formData.bike || undefined,
+        }),
       });
-      if (res.ok) {
+
+      // Also forward to Formspree if configured (email notification)
+      if (formId && formId !== "your_form_id") {
+        fetch(`https://formspree.io/f/${formId}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(formData),
+        }).catch(() => {}); // Fire-and-forget — don't block on Formspree
+      }
+
+      if (supabaseRes.ok) {
         setStatus("success");
         setFormData({ name: "", phone: "", email: "", bike: bikeSlug || "", message: "" });
       } else {

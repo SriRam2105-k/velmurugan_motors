@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { bikes } from "@/data/bikes";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://herovelumuruganmotors.in";
+  const base = "https://velmuruganmotors.in";
   
   const routes = [
     { url: base, priority: 1.0 },
