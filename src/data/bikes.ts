@@ -57,7 +57,7 @@ export const bikes: Bike[] = [
       emiStarting: 2197,
     },
     images: {
-      main: "/bikes/hf-deluxe/main.png",
+      main: "/bikes/HF Deluxe/Bank Funk Lime Yellow.jpg",
       variants: {
               "Bank Funk Lime Yellow": "/bikes/HF Deluxe/Bank Funk Lime Yellow.jpg",
               "Black Grey Stripe": "/bikes/HF Deluxe/Black Grey Stripe.jpg",
@@ -99,7 +99,7 @@ export const bikes: Bike[] = [
       emiStarting: 2300,
     },
     images: {
-      main: "/bikes/hf-deluxe-pro/main.png",
+      main: "/bikes/HF Deluxe/Black Grey Stripe.jpg",
       variants: {
               "Bank Funk Lime Yellow": "/bikes/HF Deluxe/Bank Funk Lime Yellow.jpg",
               "Black Grey Stripe": "/bikes/HF Deluxe/Black Grey Stripe.jpg",
@@ -142,7 +142,7 @@ export const bikes: Bike[] = [
       emiStarting: 2600,
     },
     images: {
-      main: "/bikes/splendor-plus/main.png",
+      main: "/bikes/Splendor +/Black Heavy Grey.jpg",
       variants: {
               "Black Heavy Grey": "/bikes/Splendor +/Black Heavy Grey.jpg",
               "Black Red Purple": "/bikes/Splendor +/Black Red Purple.jpg",
@@ -184,7 +184,7 @@ export const bikes: Bike[] = [
       emiStarting: 2700,
     },
     images: {
-      main: "/bikes/splendor-plus-2o/main.png",
+      main: "/bikes/Splendor + XTEC 2.0/Black Heavy Grey.jpg",
       variants: {
               "Black Heavy Grey": "/bikes/Splendor + XTEC 2.0/Black Heavy Grey.jpg",
               "Matte Grey": "/bikes/Splendor + XTEC 2.0/Matte Grey.jpg",
@@ -224,7 +224,7 @@ export const bikes: Bike[] = [
       emiStarting: 2750,
     },
     images: {
-      main: "/bikes/splendor-plus-xtec/main.png",
+      main: "/bikes/Splendor + XTEC/Black Sparking Blue.jpg",
       variants: {
               "Black Sparking Blue": "/bikes/Splendor + XTEC/Black Sparking Blue.jpg",
               "Black Tornado Grey": "/bikes/Splendor + XTEC/Black Tornado Grey.jpg",
@@ -265,7 +265,7 @@ export const bikes: Bike[] = [
       emiStarting: 2550,
     },
     images: {
-      main: "/bikes/passion-plus/main.png",
+      main: "/bikes/Passion/Black Brown Stripes.jpg",
       variants: {
               "Black Brown Stripes": "/bikes/Passion/Black Brown Stripes.jpg",
               "Black Heavy Grey": "/bikes/Passion/Black Heavy Grey.jpg",
@@ -308,7 +308,7 @@ export const bikes: Bike[] = [
       emiStarting: 2850,
     },
     images: {
-      main: "/bikes/super-splendor-125/main.png",
+      main: "/bikes/Splendor +/Black Heavy Grey.jpg",
     },
     features: [
       "125cc Engine",
@@ -344,7 +344,7 @@ export const bikes: Bike[] = [
       emiStarting: 3000,
     },
     images: {
-      main: "/bikes/glamour-xtec-125/main.png",
+      main: "/bikes/Glamour XTEC 125/Black Metalic Silver.jpg",
       variants: {
               "Black Metalic Silver": "/bikes/Glamour XTEC 125/Black Metalic Silver.jpg",
               "Black Sports Red": "/bikes/Glamour XTEC 125/Black Sports Red.jpg",
@@ -385,7 +385,7 @@ export const bikes: Bike[] = [
       emiStarting: 3100,
     },
     images: {
-      main: "/bikes/xtreme-125/main.png",
+      main: "/bikes/Xtreme 125R/Black Leaf Green.jpg",
       variants: {
               "Black Leaf Green": "/bikes/Xtreme 125R/Black Leaf Green.jpg",
               "Black Mattshadow Grey": "/bikes/Xtreme 125R/Black Mattshadow Grey.jpg",
@@ -428,7 +428,7 @@ export const bikes: Bike[] = [
       emiStarting: 2400,
     },
     images: {
-      main: "/bikes/pleasure-plus-110/main.png",
+      main: "/bikes/Pleasure +XTEC/Copper Brown.jpg",
       variants: {
               "Copper Brown": "/bikes/Pleasure +XTEC/Copper Brown.jpg",
               "Matte Black": "/bikes/Pleasure +XTEC/Matte Black.jpg",
@@ -470,7 +470,7 @@ export const bikes: Bike[] = [
       emiStarting: 2600,
     },
     images: {
-      main: "/bikes/pleasure-xtec/main.png",
+      main: "/bikes/Pleasure +XTEC/Matte Black.jpg",
       variants: {
               "Copper Brown": "/bikes/Pleasure +XTEC/Copper Brown.jpg",
               "Matte Black": "/bikes/Pleasure +XTEC/Matte Black.jpg",
@@ -511,7 +511,7 @@ export const bikes: Bike[] = [
       emiStarting: 2500,
     },
     images: {
-      main: "/bikes/xoom-110/main.png",
+      main: "/bikes/Xoom 110/Black.jpg",
       variants: {
               "Black": "/bikes/Xoom 110/Black.jpg",
               "Moon Yellow": "/bikes/Xoom 110/Moon Yellow.jpg",
@@ -551,7 +551,7 @@ export const bikes: Bike[] = [
       emiStarting: 2650,
     },
     images: {
-      main: "/bikes/destini-xtec-125/main.png",
+      main: "/bikes/Destini XTEC 125/Groovy Red.jpg",
       variants: {
               "Groovy Red": "/bikes/Destini XTEC 125/Groovy Red.jpg",
               "Gun Metal Grey": "/bikes/Destini XTEC 125/Gun Metal Grey.jpg",
