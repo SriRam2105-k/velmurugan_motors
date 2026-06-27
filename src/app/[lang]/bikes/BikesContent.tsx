@@ -51,7 +51,7 @@ export default function BikesContent({ lang, dict, bikes }: { lang: "en" | "ta",
             ))}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 min-h-[400px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 min-h-[400px] bike-card-grid transition-opacity duration-200">
             {filteredBikes.map((bike) => (
               <BikeCard key={bike.id} bike={bike} lang={lang} dict={dict} />
             ))}

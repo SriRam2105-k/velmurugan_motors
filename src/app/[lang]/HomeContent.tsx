@@ -88,20 +88,18 @@ export default function HomeContent({
           {heroSlides.map((slide, index) => (
             <motion.div
               key={slide.id}
-              className="absolute inset-0 w-full h-full"
+              className="absolute inset-0 w-full h-full carousel-slide"
               initial={{ opacity: 0 }}
               animate={{ opacity: index === activeHeroSlide ? 1 : 0 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
             >
-              {index === activeHeroSlide && (
-                <Image
-                  src={slide.image}
-                  alt={slide.alt}
-                  fill
-                  className="object-cover"
-                  priority={index === 0}
-                />
-              )}
+              <Image
+                src={slide.image}
+                alt={slide.alt}
+                fill
+                className="object-cover"
+                priority={index === 0}
+              />
             </motion.div>
           ))}
           

@@ -9,6 +9,10 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "wwbdufcofjknbzduiwzv.supabase.co" },
     ],
   },
+  experimental: {
+    // Tree-shake large libraries to reduce JS bundle size & parse time
+    optimizePackageImports: ["framer-motion", "lucide-react"],
+  },
 };
 
 export default nextConfig;

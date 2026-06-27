@@ -1,6 +1,7 @@
 // data/carousel.ts
-import { createClient } from "@/lib/supabase/server";
+import { createClient as createSupabaseClient } from "@supabase/supabase-js";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { unstable_cache } from "next/cache";
 
 export type CarouselImage = {
   id: string;
@@ -10,26 +11,39 @@ export type CarouselImage = {
   created_at: string;
 };
 
+// Use static anon client (no cookies) so ISR caching is preserved
+const getAnonClient = () =>
+  createSupabaseClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    { auth: { persistSession: false } }
+  );
+
 /**
  * Public: Fetch all carousel images ordered by display_order.
+ * Cached for 1 hour via Next.js data cache (consistent with ISR revalidate).
  */
-export async function getCarouselImages(): Promise<CarouselImage[]> {
-  const supabase = await createClient();
-  const { data, error } = await supabase
-    .from("carousel_images")
-    .select("*")
-    .order("display_order", { ascending: true })
-    .order("created_at", { ascending: false });
+export const getCarouselImages = unstable_cache(
+  async (): Promise<CarouselImage[]> => {
+    const supabase = getAnonClient();
+    const { data, error } = await supabase
+      .from("carousel_images")
+      .select("*")
+      .order("display_order", { ascending: true })
+      .order("created_at", { ascending: false });
 
-  if (error) {
-    console.error("[getCarouselImages] Supabase error:", error.message);
-    return [];
-  }
-  return data as CarouselImage[];
-}
+    if (error) {
+      console.error("[getCarouselImages] Supabase error:", error.message);
+      return [];
+    }
+    return data as CarouselImage[];
+  },
+  ["carousel_images"],
+  { revalidate: 3600, tags: ["carousel"] }
+);
 
 /**
- * Admin: Fetch all carousel images (can use admin client to bypass RLS if needed, but public is fine).
+ * Admin: Fetch all carousel images (uses admin client to bypass RLS).
  */
 export async function getAdminCarouselImages(): Promise<CarouselImage[]> {
   const admin = createAdminClient();

@@ -25,6 +25,17 @@ export default function BikeCard({ bike, lang, dict }: BikeCardProps) {
     }).format(amount);
   };
 
+  const displayImage = (() => {
+    if (bike.images.variants && bike.colors?.length > 0) {
+      for (const color of bike.colors) {
+        if (bike.images.variants[color]) {
+          return bike.images.variants[color];
+        }
+      }
+    }
+    return bike.images.main;
+  })();
+
   return (
     <div className="group bg-white border border-slate-100 cut-corner overflow-hidden focus-within:overflow-visible transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(226,33,28,0.06),inset_0_0_0_2px_#E2211C] flex flex-col h-full relative">
       {/* Image area */}
@@ -34,11 +45,12 @@ export default function BikeCard({ bike, lang, dict }: BikeCardProps) {
         {/* Bike Image */}
         <div className="relative w-full h-full p-4 transition-transform duration-500 group-hover:scale-110">
           <Image
-            src={bike.images.main}
+            src={displayImage}
             alt={bike.name}
             fill
             className="object-contain"
             sizes="(max-width: 768px) 100vw, 300px"
+            unoptimized={displayImage.includes('supabase.co')}
             onError={(e) => {
               // Fallback to icon if image fails
               const target = e.target as HTMLImageElement;
