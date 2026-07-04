@@ -52,7 +52,7 @@ export default function ServicesClient() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative pt-24 sm:pt-32 lg:pt-40 pb-16 lg:pb-20 bg-[#0a0a0a] overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 lg:pt-40 pb-16 lg:pb-20 bg-slate-900 overflow-hidden">
         <div className="absolute top-0 right-0 w-full lg:w-1/2 h-full bg-gradient-to-l from-[#e11d2a]/10 to-transparent pointer-events-none" />
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,7 +146,7 @@ export default function ServicesClient() {
       </section>
 
       {/* Book Service CTA */}
-      <section className="py-12 sm:py-16 lg:py-24 bg-[#0a0a0a] relative overflow-hidden">
+      <section className="py-12 sm:py-16 lg:py-24 bg-slate-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[#e11d2a]/5 pointer-events-none" />
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <h2 className="text-2xl sm:text-4xl lg:text-6xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.9]">
