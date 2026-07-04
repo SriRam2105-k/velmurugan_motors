@@ -3,10 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Fuel, Zap, Settings, MessageCircle, CheckCircle } from "lucide-react";
+import { Fuel, Zap, Settings, MessageCircle, CheckCircle, ZoomIn } from "lucide-react";
 import { buttonVariants } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Bike } from "@/data/bikes";
+import ImageZoomModal from "@/components/ImageZoomModal";
 
 const colorKeywords: { keyword: string; hex: string }[] = [
   { keyword: "lime", hex: "#a3e635" },
@@ -58,6 +59,7 @@ export default function BikeDetailClient({ bike, dict, lang }: { bike: Bike; dic
   })();
 
   const [selectedColor, setSelectedColor] = useState(uniqueColors[0] || "");
+  const [isZoomOpen, setIsZoomOpen] = useState(false);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat("en-IN", {
@@ -83,8 +85,11 @@ export default function BikeDetailClient({ bike, dict, lang }: { bike: Bike; dic
       {/* Bike Visual */}
       <div className="lg:sticky lg:top-24">
         <div className="rounded-3xl overflow-hidden shadow-inner relative">
-          {/* Image container — no filters, no overlays */}
-          <div className="bg-gradient-to-br from-slate-100 to-slate-200 h-80 lg:h-96 flex items-center justify-center relative group">
+          {/* Image container — click to zoom */}
+          <div
+            onClick={() => setIsZoomOpen(true)}
+            className="bg-gradient-to-br from-slate-100 to-slate-200 h-80 lg:h-96 flex items-center justify-center relative group cursor-zoom-in"
+          >
             <Image
               src={bike.images.variants?.[selectedColor] || bike.images.main}
               alt={`${bike.name} ${selectedColor}`}
@@ -93,6 +98,17 @@ export default function BikeDetailClient({ bike, dict, lang }: { bike: Bike; dic
               sizes="(max-width: 768px) 100vw, 500px"
               priority
             />
+            {/* Zoom Icon Hint (Top-Right) */}
+            <div className="absolute top-4 right-4 bg-white/90 hover:bg-white backdrop-blur-sm text-slate-800 p-2.5 rounded-full shadow-md opacity-0 group-hover:opacity-100 scale-90 group-hover:scale-100 transition-all duration-300 pointer-events-none">
+              <ZoomIn className="w-5 h-5 text-slate-700" />
+            </div>
+            {/* Click to Zoom Bottom Badge */}
+            <div className="absolute inset-x-0 bottom-4 flex justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-1 group-hover:translate-y-0">
+              <span className="bg-slate-900/90 backdrop-blur-sm text-white text-[10px] font-black uppercase tracking-widest px-4 py-2 rounded-full shadow-lg flex items-center gap-1.5 border border-white/10">
+                <ZoomIn className="w-3.5 h-3.5 text-white" />
+                {dict.bike_card?.click_to_zoom || "Click to Zoom"}
+              </span>
+            </div>
           </div>
           {/* Color accent bar — subtle colored strip at the bottom */}
           <div
@@ -238,6 +254,13 @@ export default function BikeDetailClient({ bike, dict, lang }: { bike: Bike; dic
           </ul>
         </div>
       </div>
+
+      <ImageZoomModal
+        isOpen={isZoomOpen}
+        onClose={() => setIsZoomOpen(false)}
+        src={bike.images.variants?.[selectedColor] || bike.images.main}
+        alt={`${bike.name} ${selectedColor}`}
+      />
     </div>
   );
 }

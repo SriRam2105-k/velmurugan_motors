@@ -1,12 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Fuel, Zap, ArrowRight } from "lucide-react";
+import { Fuel, Zap, ArrowRight, ZoomIn } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import type { Bike } from "@/data/bikes";
 import { cn } from "@/lib/utils";
+import ImageZoomModal from "@/components/ImageZoomModal";
 
 
 interface BikeCardProps {
@@ -16,6 +18,7 @@ interface BikeCardProps {
 }
 
 export default function BikeCard({ bike, lang, dict }: BikeCardProps) {
+  const [isZoomOpen, setIsZoomOpen] = useState(false);
 
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat("en-IN", {
@@ -37,10 +40,24 @@ export default function BikeCard({ bike, lang, dict }: BikeCardProps) {
   })();
 
   return (
-    <div className="group bg-white border border-slate-100 cut-corner overflow-hidden focus-within:overflow-visible transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(226,33,28,0.06),inset_0_0_0_2px_#E2211C] flex flex-col h-full relative">
+    <Link
+      href={`/${lang}/bikes/${bike.slug}`}
+      className="group bg-white border border-slate-100 cut-corner overflow-hidden focus-within:overflow-visible transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(226,33,28,0.06),inset_0_0_0_2px_#E2211C] flex flex-col h-full relative cursor-pointer"
+    >
       {/* Image area */}
-      <div className="relative bg-slate-50 h-56 flex items-center justify-center overflow-hidden group-hover:bg-slate-100/85 transition-colors">
+      <div
+        onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsZoomOpen(true); }}
+        className="relative bg-slate-50 h-56 flex items-center justify-center overflow-hidden group-hover:bg-slate-100/85 transition-colors cursor-zoom-in"
+      >
         <div className="absolute inset-0 bg-gradient-to-br from-black/5 to-transparent pointer-events-none" />
+        
+        {/* Zoom Hint Overlay */}
+        <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center pointer-events-none z-10">
+          <span className="bg-slate-900/90 backdrop-blur-sm text-white text-[9px] font-black uppercase tracking-widest px-3 py-1.5 rounded-full shadow-lg flex items-center gap-1 border border-white/10 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+            <ZoomIn className="w-3.5 h-3.5" />
+            {dict.bike_card?.click_to_zoom || "Zoom"}
+          </span>
+        </div>
         
         {/* Bike Image */}
         <div className="relative w-full h-full p-4 transition-transform duration-500 group-hover:scale-110">
@@ -132,6 +149,7 @@ export default function BikeCard({ bike, lang, dict }: BikeCardProps) {
           <div className="flex flex-col gap-2">
             <Link
               href={`/${lang}/contact?bike=${bike.slug}`}
+              onClick={(e) => e.stopPropagation()}
               className={cn(
                 buttonVariants(),
                 "bg-[#E2211C] hover:bg-[#b9101b] hover:scale-[1.02] text-white rounded-none h-12 font-black uppercase tracking-tight shadow-lg shadow-red-900/40 text-xs xl:text-sm transition-all duration-300"
@@ -141,6 +159,7 @@ export default function BikeCard({ bike, lang, dict }: BikeCardProps) {
             </Link>
             <Link
               href={`/${lang}/bikes/${bike.slug}`}
+              onClick={(e) => e.stopPropagation()}
               className={cn(
                 buttonVariants({ variant: "secondary" }),
                 "bg-slate-800 hover:bg-slate-700 text-white hover:text-white h-10 font-black uppercase text-[9px] xl:text-[10px] transition-colors truncate",
@@ -152,6 +171,13 @@ export default function BikeCard({ bike, lang, dict }: BikeCardProps) {
           </div>
         </div>
       </div>
-    </div>
+
+      <ImageZoomModal
+        isOpen={isZoomOpen}
+        onClose={() => setIsZoomOpen(false)}
+        src={displayImage}
+        alt={bike.name}
+      />
+    </Link>
   );
 }

@@ -40,6 +40,7 @@
     "easy_emi": "Easy EMI",
     "enquire_now": "Enquire Now",
     "technical_specs": "Technical Specs",
+    "click_to_zoom": "Click to Zoom",
     "categories": {
       "commuter": "Commuter",
       "premium": "Premium",
@@ -436,7 +437,8 @@
       "on_road_price": "On-road price:",
       "emi_starts": "EMI from",
       "whatsapp_message": "Hi! I am interested in {bike}. Please share details.",
-      "color_disclaimer": "* Visual color tinting is for representation. Actual colors may vary."
+      "color_disclaimer": "* Visual color tinting is for representation. Actual colors may vary.",
+      "click_to_zoom": "Click to Zoom"
     }
   },
   "bike_models": {
