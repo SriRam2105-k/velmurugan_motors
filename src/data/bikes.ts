@@ -52,7 +52,7 @@ export const bikes: Bike[] = [
           "Black Red Stripe"
     ],
     price: {
-      exShowroom: 64218,
+      exShowroom: 59477,
       onRoad: 76406,
       emiStarting: 2197,
     },
@@ -94,7 +94,7 @@ export const bikes: Bike[] = [
           "Black Red Stripe"
     ],
     price: {
-      exShowroom: 68000,
+      exShowroom: 72620,
       onRoad: 80500,
       emiStarting: 2300,
     },
@@ -137,7 +137,7 @@ export const bikes: Bike[] = [
           "Sports Red Black"
     ],
     price: {
-      exShowroom: 75039,
+      exShowroom: 77557,
       onRoad: 89943,
       emiStarting: 2600,
     },
@@ -159,45 +159,7 @@ export const bikes: Bike[] = [
     ],
   },
 
-  {
-    id: 4,
-    slug: "splendor-plus-20",
-    name: "Splendor Plus 2.0",
-    category: "commuter",
-    tagline: "New Look, Legendary Mileage",
-    inStock: true,
-    isBestSeller: false,
-    isNew: false,
-    specs: {
-      mileage: "70 kmpl",
-      engine: "97.2cc",
-      power: "7.91 bhp",
-    },
-    colors: [
-          "Black Heavy Grey",
-          "Matte Grey",
-          "Nobel Red"
-    ],
-    price: {
-      exShowroom: 78000,
-      onRoad: 92000,
-      emiStarting: 2700,
-    },
-    images: {
-      main: "/bikes/Splendor + XTEC 2.0/Black Heavy Grey.jpg",
-      variants: {
-              "Black Heavy Grey": "/bikes/Splendor + XTEC 2.0/Black Heavy Grey.jpg",
-              "Matte Grey": "/bikes/Splendor + XTEC 2.0/Matte Grey.jpg",
-              "Nobel Red": "/bikes/Splendor + XTEC 2.0/Nobel Red.jpg"
-      }
-    },
-    features: [
-      "Refreshed Design",
-      "i3S Technology",
-      "USB Charging Port",
-      "Integrated Braking System",
-    ],
-  },
+
 
   {
     id: 5,
@@ -219,7 +181,7 @@ export const bikes: Bike[] = [
           "Red Black"
     ],
     price: {
-      exShowroom: 79703,
+      exShowroom: 81083,
       onRoad: 94000,
       emiStarting: 2750,
     },
@@ -241,8 +203,8 @@ export const bikes: Bike[] = [
 
   {
     id: 6,
-    slug: "passion-pro",
-    name: "Passion Pro",
+    slug: "passion-plus",
+    name: "Passion Plus",
     category: "commuter",
     tagline: "Stylish, Efficient, Reliable",
     inStock: true,
@@ -260,7 +222,7 @@ export const bikes: Bike[] = [
           "Sports Red Black"
     ],
     price: {
-      exShowroom: 74000,
+      exShowroom: 80951,
       onRoad: 88000,
       emiStarting: 2550,
     },
@@ -283,8 +245,8 @@ export const bikes: Bike[] = [
 
   {
     id: 7,
-    slug: "super-splendor-125",
-    name: "Super Splendor 125",
+    slug: "super-splendor-xtec",
+    name: "Super Splendor XTEC",
     category: "premium",
     tagline: "125cc Power, Splendor Trust",
     inStock: true,
@@ -303,7 +265,7 @@ export const bikes: Bike[] = [
       "Matt Chestnut Brown",
     ],
     price: {
-      exShowroom: 83448,
+      exShowroom: 84448,
       onRoad: 98000,
       emiStarting: 2850,
     },
@@ -320,8 +282,8 @@ export const bikes: Bike[] = [
 
   {
     id: 8,
-    slug: "glamour-xtec-125",
-    name: "Glamour Xtec 125",
+    slug: "glamour-x-125",
+    name: "Glamour X 125",
     category: "premium",
     tagline: "Smart Style for Every Road",
     inStock: true,
@@ -339,7 +301,7 @@ export const bikes: Bike[] = [
           "Techno Blu Met Blk"
     ],
     price: {
-      exShowroom: 88137,
+      exShowroom: 87767,
       onRoad: 103000,
       emiStarting: 3000,
     },
@@ -380,7 +342,7 @@ export const bikes: Bike[] = [
           "Black Pearl Red"
     ],
     price: {
-      exShowroom: 90800,
+      exShowroom: 91500,
       onRoad: 107000,
       emiStarting: 3100,
     },
@@ -465,7 +427,7 @@ export const bikes: Bike[] = [
           "Pearl Blue"
     ],
     price: {
-      exShowroom: 75712,
+      exShowroom: 79738,
       onRoad: 90000,
       emiStarting: 2600,
     },
@@ -506,7 +468,7 @@ export const bikes: Bike[] = [
           "Polestar Blue"
     ],
     price: {
-      exShowroom: 72701,
+      exShowroom: 75000,
       onRoad: 87000,
       emiStarting: 2500,
     },
@@ -528,8 +490,8 @@ export const bikes: Bike[] = [
 
   {
     id: 13,
-    slug: "destini-xtec-125",
-    name: "Destini 125 Xtec",
+    slug: "destini-125",
+    name: "Destini 125",
     category: "scooter",
     tagline: "125cc Power, Every Day",
     inStock: true,
@@ -546,7 +508,7 @@ export const bikes: Bike[] = [
           "Mystique Magenta"
     ],
     price: {
-      exShowroom: 75838,
+      exShowroom: 80450,
       onRoad: 91000,
       emiStarting: 2650,
     },
